@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css" />
+    <title>BruChure</title>
+</head>
+
+<body>
+    <nav class="level navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="level-item">
+            <div class="field has-addons">
+                <p class="control">
+                    <input class="input" type="text" placeholder="Find a beer">
+                </p>
+                <p class="control">
+                    <button class="button">
+                                    Search
+                                  </button>
+                </p>
+
+            </div>
+
+            <div class="select">
+                <select>
+                                      <option>Beer Name</option>
+                                      <option>Brewery Name</option>
+                                      <option>Beer Type</option>
+                                      <option>ABV</option>
+                                      <option>IBU</option>
+                                    </select>
+            </div>
+        </div>
+
+    </nav>
+    <section class="section">
+
+        <div ng-app="bruVue" ng-controller="dataCtrl" class="container">
+
+            <ul class="content">
+                <li class="info box" ng-repeat="data in beerInfo">
+                    <h2 class="title">{{data["Beer Name"]}}</h2>
+                    <h3>By {{data["Brewery Name"]}}</h3>
+                    <p>{{data["Beer Style"]}}</p>
+                    <span>ABV:{{data["ABV"]}}</span>
+                    <span>IBU:{{data["IBU"]}}</span>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
