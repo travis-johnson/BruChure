@@ -6,6 +6,12 @@
 nav {
   padding: 1.5em;
 }
- 
 
- /*# sourceMappingURL= styles.css.map */
+.field:not(:last-child) {
+  margin-bottom: 0 !important;
+  margin-right: 1em;
+}
+
+.section {
+  margin-top: 5em;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="bruVue" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css" />
+    <link rel="stylesheet" href="styles/bulma/bulma.css" />
     <title>BruChure</title>
 </head>
 
-<body>
-    <nav class="level navbar is-dark" role="navigation" aria-label="main navigation">
+<body ng-controller="dataCtrl">
+    <nav class="level navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="level-item">
             <div class="field has-addons">
                 <p class="control">
@@ -36,19 +36,21 @@
                                     </select>
             </div>
         </div>
-
+        <div>
+            <a>Sort By Name</a>
+        </div>
     </nav>
     <section class="section">
 
-        <div ng-app="bruVue" ng-controller="dataCtrl" class="container">
+        <div class="container">
 
             <ul class="content">
-                <li class="info box" ng-repeat="data in beerInfo">
-                    <h2 class="title">{{data["Beer Name"]}}</h2>
-                    <h3>By {{data["Brewery Name"]}}</h3>
-                    <p>{{data["Beer Style"]}}</p>
-                    <span>ABV:{{data["ABV"]}}</span>
-                    <span>IBU:{{data["IBU"]}}</span>
+                <li class="info box has-text-centered" ng-repeat="data in beerInfo">
+                    <h3 class="title">{{data["Beer Name"]}}</h3>
+                    <h4 class="subtitle">From: {{data["Brewery Name"]}}</h4>
+                    <h4>Style: {{data["Beer Style"]}}</h4>
+                    <span>ABV: {{data["ABV"]}}</span>
+                    <span>IBU: {{data["IBU"]}}</span>
                 </li>
             </ul>
 
