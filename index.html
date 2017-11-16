@@ -16,7 +16,7 @@
         <div class="level-item">
             <div class="field has-addons">
                 <p class="control">
-                    <input class="input" type="text" placeholder="Find a beer">
+                    <input ng-model="searchBeer" class="input" type="text" placeholder="Search">
                 </p>
                 <p class="control">
                     <button class="button">
@@ -37,22 +37,45 @@
             </div>
         </div>
         <div>
-            <a>Sort By Name</a>
+            <a href="" ng-click="beerName; reverse=!reverse">Sort By Beer Name</a>
         </div>
     </nav>
     <section class="section">
 
         <div class="container">
+            <table class="table is-hoverable is-striped">
+                <thead>
+                    <tr>
+                        <th><a href="#" ng-click="sortType='Beer Name'; sortReverse=!sortReverse">Beer Name</a></th>
+                        <th>Brewery Name</th>
+                        <th>Beer Style</th>
+                        <th>ABV</th>
+                        <th>IBU</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in beerInfo| filter:searchBeer">
+                        <td>{{data[ "Beer Name"]}}</td>
+                        <td>{{data["Brewery Name"]}}</td>
+                        <td>{{data["Beer Style"]}}</td>
 
-            <ul class="content">
-                <li class="info box has-text-centered" ng-repeat="data in beerInfo">
+                        <td>{{data["ABV"]}}</td>
+                        <td>{{data["IBU"]}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <ul class="content">
+                <li class="info box has-text-centered" ng-repeat="data in beerInfo|orderBy:beerName:reverse">
                     <h3 class="title">{{data["Beer Name"]}}</h3>
                     <h4 class="subtitle">From: {{data["Brewery Name"]}}</h4>
                     <h4>Style: {{data["Beer Style"]}}</h4>
                     <span>ABV: {{data["ABV"]}}</span>
                     <span>IBU: {{data["IBU"]}}</span>
                 </li>
-            </ul>
+            </ul> -->
+
+
 
         </div>
     </section>
