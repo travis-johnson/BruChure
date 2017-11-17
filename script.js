@@ -5,15 +5,13 @@ app.controller('dataCtrl', function($scope, $filter, $http) {
         .then(function(response) {
             $scope.beerInfo = response.data;
             // $scope.predicate = 'Beer Name';
-            $scope.sortType = 'Beer Name'; // set the default sort type
-            $scope.sortReverse = false; // set the default sort order
+            $scope.propertyName = 'Beer%Name'; // set the default sort type
+            $scope.reverse = true; // set the default sort order
             $scope.searchBeer = ''; // set the default search filter term
-            // console.log($scope.predicate);
-            // for (var i = 0; i <= response.data.length; i++) {
-            //     // console.log(response.data[i]['Beer Name']);
-            //     $scope.predicate = response.data[i];
 
-
-            // }
+            $scope.sortBy = function(propertyName) {
+                $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+                $scope.propertyName = propertyName;
+            };
         });
 });
