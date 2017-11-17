@@ -65,7 +65,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="data in beerInfo| orderBy:propertyName:reverse |filter:searchBeer">
+                    <tr ng-repeat="data in beerInfo| orderBy:propertyName:!reverse |filter:searchBeer">
                         <td>{{data["Beer Name"]}}</td>
                         <td>{{data["Brewery Name"]}}</td>
                         <td>{{data["Beer Style"]}}</td>
