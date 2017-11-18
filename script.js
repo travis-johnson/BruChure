@@ -42,6 +42,7 @@ app.controller('dataCtrl',
         $http.get(proxy + "https://s3.amazonaws.com/bruvue-data/beer-data.json").then(
             function(response) {
                 // process data to remove spaces in key names
+
                 $scope.beerInfo = [];
                 response.data.forEach(
                     function(item) {
@@ -57,5 +58,7 @@ app.controller('dataCtrl',
                 $scope.reverse = false;
                 $scope.searchBeer = ''; // set the default search filter term
 
+
             });
+
     });
