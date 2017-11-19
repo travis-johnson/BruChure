@@ -32,8 +32,35 @@ nav {
     content: '\25bc'; // BLACK DOWN-POINTING TRIANGLE
 }
 
+#mobile-btns {
+    display: block;
+    text-align: center;
+    margin: 1em;
+}
+
+#info-table {
+    display: none;
+}
+
+#info-blocks {
+    display: block;
+}
+
 @media(min-width:768px) {
     .section {
         margin-top: 5em;
+    }
+    #info-table {
+        display: table;
+    }
+    #info-blocks,
+    #mobile-btns {
+        display: none;
+    }
+}
+
+@media(max-width:800px) {
+    table {
+        overflow-x: auto;
     }
 }

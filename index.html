@@ -34,23 +34,23 @@
     <section class="section">
 
         <div class="container">
-            <table class="table is-hoverable is-striped is-narrow">
+            <table id="info-table" class="table is-hoverable is-fullwidth is-striped is-narrow">
                 <thead>
                     <tr>
-                        <th class="has-text-centered"><a href="" ng-click="propertyName='name';reverse=!reverse;">Beer Name</a>
+                        <th><a href="" ng-click="propertyName='name';reverse=!reverse;">Beer Name</a>
                             <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
                         </th>
-                        <th class="has-text-centered"><a href="" ng-click="propertyName='brewery';reverse=!reverse;">Brewery Name</a>
+                        <th><a href="" ng-click="propertyName='brewery';reverse=!reverse;">Brewery Name</a>
                             <span class="sortorder" ng-show="propertyName === 'brewery'" ng-class="{reverse: reverse}"></span>
                         </th>
-                        <th class="has-text-centered"><a href="" ng-click="propertyName='style';reverse=!reverse;">Beer Style</a>
+                        <th><a href="" ng-click="propertyName='style';reverse=!reverse;">Beer Style</a>
                             <span class="sortorder" ng-show="propertyName === 'style'" ng-class="{reverse: reverse}"></span>
                         </th>
-                        <th class="has-text-centered"><a href="" ng-click="propertyName='abv';reverse=!reverse;">ABV</a>
+                        <th><a href="" ng-click="propertyName='abv';reverse=!reverse;">ABV</a>
                             <span class="sortorder" ng-show="propertyName === 'abv'" ng-class="{reverse: reverse}"></span>
 
                         </th>
-                        <th class="has-text-centered"><a href="" ng-click="propertyName='ibu';reverse=!reverse;">IBU</a>
+                        <th><a href="" ng-click="propertyName='ibu';reverse=!reverse;">IBU</a>
                             <span class="sortorder" ng-show="propertyName === 'ibu'" ng-class="{reverse: reverse}"></span>
                         </th>
                     </tr>
@@ -59,21 +59,34 @@
                     <tr ng-repeat="data in beerInfo | orderBy:propertyName:reverse| filter:searchBeer">
                         <td>{{data.name}}</td>
                         <td>{{data.brewery}}</td>
-                        <td class="has-text-centered">{{data.style}}</td>
-                        <td class="has-text-centered">{{data.abv}}</td>
+                        <td>{{data.style}}</td>
+                        <td>{{data.abv}}</td>
                         <td>{{data.ibu}}</td>
                     </tr>
                 </tbody>
             </table>
-            <!-- <ul class="content">
-                <li class="info box has-text-centered" ng-repeat="data in beerInfo|orderBy:beerName:reverse">
-                    <h3 class="title">{{data["Beer Name"]}}</h3>
-                    <h4 class="subtitle">From: {{data["Brewery Name"]}}</h4>
-                    <h4>Style: {{data["Beer Style"]}}</h4>
-                    <span>ABV: {{data["ABV"]}}</span>
-                    <span>IBU: {{data["IBU"]}}</span>
+            <ul id="info-blocks">
+                <li id="mobile-btns">
+                    <h2 class="is-size-4">Sort By:</h2>
+                    <button class="button is-primary" ng-click="propertyName='name';reverse=!reverse;">Beer
+                        <i class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></i></button>
+                    <button class="button is-primary" ng-click="propertyName='brewery';reverse=!reverse;">Brewery
+                     <span class="sortorder" ng-show="propertyName === 'brewery'" ng-class="{reverse: reverse}"></span></button>
+                    <button class="button is-primary" ng-click="propertyName='style';reverse=!reverse;">Style
+                      <span class="sortorder" ng-show="propertyName === 'style'" ng-class="{reverse: reverse}"></span></button>
+                    <button class="button is-primary" ng-click="propertyName='abv';reverse=!reverse;">ABV
+                      <span class="sortorder" ng-show="propertyName === 'abv'" ng-class="{reverse: reverse}"></span></button>
+                    <button class="button is-primary" ng-click="propertyName='ibu';reverse=!reverse;">IBU
+                      <span class="sortorder" ng-show="propertyName === 'ibu'" ng-class="{reverse: reverse}"></span></button>
                 </li>
-            </ul> -->
+                <li class="info box has-text-centered" ng-repeat="data in beerInfo|orderBy:propertyName:reverse| filter:searchBeer">
+                    <h3 class="title">{{data.name}}</h3>
+                    <h4 class="subtitle">From: {{data.brewery}}</h4>
+                    <h4>Style: {{data.style}}</h4>
+                    <span>ABV: {{data.abv}}</span>
+                    <span>IBU: {{data.ibu}}</span>
+                </li>
+            </ul>
 
 
 
