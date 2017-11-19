@@ -15,7 +15,7 @@ nav {
 }
 
 .section {
-    margin-top: 5em;
+    margin-top: 10em;
 }
 
 .navbar-item {
@@ -30,4 +30,10 @@ nav {
 
 .sortorder.reverse:after {
     content: '\25bc'; // BLACK DOWN-POINTING TRIANGLE
+}
+
+@media(min-width:768px) {
+    .section {
+        margin-top: 5em;
+    }
 }

@@ -13,7 +13,7 @@ nav {
 }
 
 .section {
-  margin-top: 5em;
+  margin-top: 10em;
 }
 
 .navbar-item h1 {
@@ -26,4 +26,10 @@ nav {
 
 .sortorder.reverse:after {
   content: '\25bc';
+}
+
+@media (min-width: 768px) {
+  .section {
+    margin-top: 5em;
+  }
 }
