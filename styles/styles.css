@@ -16,6 +16,10 @@ nav {
   margin-top: 5em;
 }
 
+.navbar-item h1 {
+  font-size: 1.5em;
+}
+
 .sortorder:after {
   content: '\25b2';
 }
@@ -23,6 +27,3 @@ nav {
 .sortorder.reverse:after {
   content: '\25bc';
 }
- 
-
- /*# sourceMappingURL= styles.css.map */

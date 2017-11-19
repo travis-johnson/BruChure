@@ -18,6 +18,12 @@ nav {
     margin-top: 5em;
 }
 
+.navbar-item {
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
 .sortorder:after {
     content: '\25b2'; // BLACK UP-POINTING TRIANGLE
 }

@@ -1316,8 +1316,8 @@ print {
     color: #4a4a4a;
     display: block;
     padding: 1.25rem;
-    max-width:600px;
-    margin:0 auto;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .box:not(:last-child) {
@@ -7356,7 +7356,7 @@ html.has-navbar-fixed-bottom {
 
 .navbar-item,
 .navbar-link {
-    color: #4a4a4a;
+    color: #fff;
     display: block;
     line-height: 1.5;
     padding: 0.5rem 1rem;

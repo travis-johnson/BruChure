@@ -17,10 +17,10 @@ app.controller('dataCtrl',
                         $scope.beerInfo.push(record);
                         $scope.beerInfo;
                     });
-                for (i = 0; i <= response.data.length; i++) {
-                    $scope.beerData = response.data[i];
+                // for (i = 0; i <= response.data.length; i++) {
+                //     $scope.beerData = response.data[i];
 
-                }
+                // }
                 $scope.reverse = false;
                 $scope.searchBeer = ''; // set the default search filter term
 
