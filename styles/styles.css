@@ -31,7 +31,10 @@ nav {
 #mobile-btns {
   display: block;
   text-align: center;
-  margin: 1em;
+}
+
+#mobile-btns button {
+  margin: .5em 0;
 }
 
 #info-table {

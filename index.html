@@ -80,8 +80,8 @@
                       <span class="sortorder" ng-show="propertyName === 'ibu'" ng-class="{reverse: reverse}"></span></button>
                 </li>
                 <li class="info box has-text-centered" ng-repeat="data in beerInfo|orderBy:propertyName:reverse| filter:searchBeer">
-                    <h3 class="title">{{data.name}}</h3>
-                    <h4 class="subtitle">From: {{data.brewery}}</h4>
+                    <h3 class="is-size-4">{{data.name}}</h3>
+                    <h4>From: {{data.brewery}}</h4>
                     <h4>Style: {{data.style}}</h4>
                     <span>ABV: {{data.abv}}</span>
                     <span>IBU: {{data.ibu}}</span>
