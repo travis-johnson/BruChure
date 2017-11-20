@@ -70,7 +70,7 @@
             <ul id="info-blocks">
                 <li id="mobile-btns">
                     <h2 class="is-size-4">Sort By:</h2>
-                    <button class="button is-primary" ng-click="propertyName='name';reverse=!reverse;">Beer
+                    <button class="button is-primary" ng-show="propertyName='name';" ng-click="propertyName='name';reverse=!reverse;">Beer
                         <i class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></i></button>
                     <button class="button is-primary" ng-click="propertyName='brewery';reverse=!reverse;">Brewery
                      <span class="sortorder" ng-show="propertyName === 'brewery'" ng-class="{reverse: reverse}"></span></button>
