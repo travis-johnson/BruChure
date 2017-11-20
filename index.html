@@ -21,33 +21,37 @@
             </div>
         </div>
         <div class="level-item nav-sort has-text-centered">
-            <p>Sort by:&nbsp;</p>
-            <div class="tag is-light">
-                <a href="" ng-click="propertyName='name';reverse=!reverse;">Beer Name </a>
-                <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+            <div class="navbar-item">
+                <p>Sort by:&nbsp;</p>
+                <div class="tag is-light">
+                    <a href="" ng-click="propertyName='name';reverse=!reverse;">Beer Name </a>
+                    <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
 
-            </div>
-            <div class="tag is-light">
-                <a href="" ng-click="propertyName='brewery';reverse=!reverse;">Brewery Name</a>
-                <span class="sortorder" ng-show="propertyName === 'brewery'" ng-class="{reverse: reverse}"></span>
-            </div>
-            <div class="tag is-light">
-                <a href="" ng-click="propertyName='style';reverse=!reverse;">Beer Style</a>
-                <span class="sortorder" ng-show="propertyName === 'style'" ng-class="{reverse: reverse}"></span>
-            </div>
-            <div class="tag is-light">
-                <a href="" ng-click="propertyName='abv';reverse=!reverse;">ABV</a>
-                <span class="sortorder" ng-show="propertyName === 'abv'" ng-class="{reverse: reverse}"></span>
-            </div>
-            <div class="tag is-light">
-                <a href="" ng-click="propertyName='ibu';reverse=!reverse;">IBU</a>
-                <span class="sortorder" ng-show="propertyName === 'ibu'" ng-class="{reverse: reverse}"></span>
+                </div>
+                <div class="tag is-light">
+                    <a href="" ng-click="propertyName='brewery';reverse=!reverse;">Brewery Name</a>
+                    <span class="sortorder" ng-show="propertyName === 'brewery'" ng-class="{reverse: reverse}"></span>
+                </div>
+                <div class="tag is-light">
+                    <a href="" ng-click="propertyName='style';reverse=!reverse;">Beer Style</a>
+                    <span class="sortorder" ng-show="propertyName === 'style'" ng-class="{reverse: reverse}"></span>
+                </div>
+                <div class="tag is-light">
+                    <a href="" ng-click="propertyName='abv';reverse=!reverse;">ABV</a>
+                    <span class="sortorder" ng-show="propertyName === 'abv'" ng-class="{reverse: reverse}"></span>
+                </div>
+                <div class="tag is-light">
+                    <a href="" ng-click="propertyName='ibu';reverse=!reverse;">IBU</a>
+                    <span class="sortorder" ng-show="propertyName === 'ibu'" ng-class="{reverse: reverse}"></span>
+                </div>
             </div>
         </div>
         <div class="level-item">
-            <div class="field has-addons">
-                <div class="control">
-                    <input ng-model="searchBeer" class="input" type="text" placeholder="Search">
+            <div class="navbar-item">
+                <div class="field has-addons">
+                    <div class="control">
+                        <input ng-model="searchBeer" class="input" type="text" placeholder="Filter Results">
+                    </div>
                 </div>
             </div>
         </div>
