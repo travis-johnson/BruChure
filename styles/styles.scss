@@ -24,6 +24,10 @@ nav {
     }
 }
 
+.level-item.nav-sort {
+    display: none;
+}
+
 .sortorder:after {
     content: '\25b2'; // UP-POINTING TRIANGLE
 }
@@ -59,6 +63,12 @@ nav {
     #info-blocks,
     #mobile-btns {
         display: none;
+    }
+    .level-item.nav-sort {
+        display: block;
+        .tag {
+            margin: 0 .2em;
+        }
     }
 }
 
