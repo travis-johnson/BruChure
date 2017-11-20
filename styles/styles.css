@@ -68,6 +68,9 @@ nav {
     margin-left: .1em;
     margin-right: .1em;
   }
+  .level-item.nav-sort .navbar-item p {
+    margin-right: .5em;
+  }
 }
 
 @media (max-width: 800px) {
