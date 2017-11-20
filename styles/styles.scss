@@ -25,18 +25,18 @@ nav {
 }
 
 .sortorder:after {
-    content: '\25b2'; // BLACK UP-POINTING TRIANGLE
+    content: '\25b2'; // UP-POINTING TRIANGLE
 }
 
 .sortorder.reverse:after {
-    content: '\25bc'; // BLACK DOWN-POINTING TRIANGLE
+    content: '\25bc'; // DOWN-POINTING TRIANGLE
 }
 
 #mobile-btns {
     display: block;
     text-align: center;
     button {
-        margin: .5em 0;
+        margin: 1em 0;
     }
 }
 
@@ -48,7 +48,7 @@ nav {
     display: block;
 }
 
-@media(min-width:768px) {
+@media(min-width:769px) {
     .section {
         margin-top: 5em;
     }

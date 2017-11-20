@@ -34,7 +34,7 @@ nav {
 }
 
 #mobile-btns button {
-  margin: .5em 0;
+  margin: 1em 0;
 }
 
 #info-table {
@@ -45,7 +45,7 @@ nav {
   display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .section {
     margin-top: 5em;
   }
