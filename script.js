@@ -6,7 +6,7 @@ app.controller('dataCtrl',
             function(response) {
                 // process data to remove spaces in key names
                 $scope.beerInfo = [];
-                response.data.forEach(
+                response.data.forEach( //this loops through the each json results and with the item paremeter we're able to access the keys in each json object 
                     function(item) {
                         var record = {};
                         //trims out the blank space in the keys and renders the new keys as something simple (ie.name, brewery)
@@ -15,7 +15,7 @@ app.controller('dataCtrl',
                         record.style = item['Beer Style'].trim();
                         record.abv = item['ABV'];
                         record.ibu = item['IBU'];
-                        $scope.beerInfo.push(record); //inserts the new edited keys into the objects
+                        $scope.beerInfo.push(record); //inserts the newly edited keys into the objects
                         $scope.beerInfo; //renders the new keys into an array
                     });
                 //keeps the list in proper oder upon rendering
