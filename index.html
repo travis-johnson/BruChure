@@ -96,6 +96,7 @@
             <ul id="info-blocks">
                 <li id="mobile-btns">
                     <h2 class="is-size-4">Sort By:</h2>
+                    <!-- the ng-click looks at the edited key and assigns it to propertyName and then allows you to sort the items by looking at $scope.reverse -->
                     <button class="button is-primary" ng-click="propertyName='name';reverse=!reverse;">Beer
                         <i class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></i></button>
                     <button class="button is-primary" ng-click="propertyName='brewery';reverse=!reverse;">Brewery
